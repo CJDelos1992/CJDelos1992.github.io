@@ -1,45 +1,150 @@
 :root{
-  /* Arizona desert theme */
-  --bg:#fffdf9;          /* warm off-white base (desert sand) */
-  --text:#2b1e12;        /* deep adobe brown for body text */
-  --muted:#7a5c3c;       /* muted clay brown for secondary text */
-  --brand:#c65a1e;       /* copper-terracotta primary accent */
-  --brand-alt:#0077b6;   /* sky blue secondary accent */
-  --line:#e7d8c9;        /* pale sandstone border */
-  --card:#fffaf3;        /* warm card background */
+  /* Clean blue & white (peer-like) */
+  --bg:#ffffff;          /* page background */
+  --text:#0f172a;        /* near-navy text */
+  --muted:#475569;       /* slate for secondary text */
+  --brand:#2563eb;       /* primary blue accent */
+  --brand-alt:#0ea5e9;   /* cyan secondary accent (optional) */
+  --line:#e2e8f0;        /* light border */
+  --card:#ffffff;        /* card background */
   --radius:18px;
-  --shadow:0 12px 28px rgba(113, 75, 41, 0.08);
+  --shadow:0 12px 28px rgba(2,6,23,.08);
   --max:1080px;
 }
 
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.7}
-a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+html,body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Layout wrapper */
 .wrap{max-width:var(--max);margin:0 auto;padding:22px}
-header{position:sticky;top:0;background:rgba(255,253,249,.95);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.2) blur(8px);z-index:5}
+
+/* Header: light + subtle blur */
+header{
+  position:sticky; top:0; z-index:5;
+  background:rgba(255,255,255,.9);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:saturate(1.2) blur(8px);
+}
 header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
-.brand h1{margin:0;font-size:22px} .tag{color:var(--muted);font-size:14px}
+
+.brand h1{margin:0;font-size:22px;letter-spacing:.2px}
+.tag{color:var(--muted);font-size:14px}
+
+/* Nav */
 nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-nav a{font-weight:600;padding:8px 12px;border-radius:10px;transition:background .15s ease, transform .15s ease;}
-nav a.active{background:#fbe8d2}
-nav a:hover{background:#f6eadb}
-nav a.btn{background:var(--brand);color:#fff;border:1px solid rgba(198,90,30,.3);box-shadow:0 6px 12px rgba(198,90,30,0.2)}
-nav a.btn:hover{text-decoration:none;transform:translateY(-1px);background:#b54e18}
-nav a.btn--ghost{background:transparent;color:var(--brand);border:1px solid var(--brand)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+nav a{
+  font-weight:600;
+  padding:8px 12px;
+  border-radius:10px;
+  transition:background .15s ease, transform .15s ease;
+}
+nav a.active{background:#eef2ff}   /* pale blue */
+nav a:hover{background:#f1f5ff}    /* very pale blue hover */
+
+nav a.btn{
+  background:var(--brand);
+  color:#fff;
+  border:1px solid rgba(37,99,235,.25);
+  box-shadow:0 6px 12px rgba(37,99,235,.18);
+}
+nav a.btn:hover{transform:translateY(-1px);text-decoration:none}
+nav a.btn--ghost{
+  background:#fff;
+  color:var(--brand);
+  border:1px solid var(--line);
+}
+
+/* Cards / content */
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
 .pad{padding:28px}
-h2{font-size:36px;margin:0 0 10px;letter-spacing:-0.02em}
+
+h2{font-size:36px;margin:0 0 10px;letter-spacing:-0.02em;line-height:1.2}
+h3{margin:0 0 12px;font-size:22px}
 p{margin:10px 0}
+
+/* Centered headshot */
 .center{display:flex;justify-content:center;align-items:center}
+.headshot{
+  width:240px;height:240px;border-radius:50%;object-fit:cover;
+  border:6px solid var(--bg);
+  box-shadow:0 10px 26px rgba(2,6,23,.12);
+}
+
+/* Badges + KPIs */
 .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-.badge{font-size:12px;border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:#f8f2ec}
-.headshot{width:240px;height:240px;border-radius:50%;object-fit:cover;border:6px solid var(--bg);box-shadow:0 10px 26px rgba(113,75,41,.12)}
+.badge{
+  font-size:12px;
+  border:1px solid var(--line);
+  padding:6px 10px;
+  border-radius:999px;
+  background:#f1f5ff; /* pale blue chip */
+  color:#0f172a;
+}
 .kpis{display:grid;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:14px}
-.kpi{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff7ef}
-.kpi h4{margin:0 0 6px;font-size:15px} .kpi small{color:var(--muted)}
-section{margin:34px 0} h3{margin:0 0 12px;font-size:22px}
-.item{border:1px solid var(--line);border-radius:16px;padding:18px;background:var(--card);box-shadow:var(--shadow)}
-footer{margin:40px 0 20px;color:var(--muted);font-size:13px;text-align:center;background:linear-gradient(to top,#e7d8c9 0%,transparent 80%)}
+.kpi{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  background:#f8fafc; /* light slate bg */
+}
+.kpi h4{margin:0 0 6px;font-size:15px}
+.kpi small{color:var(--muted)}
+
+/* Generic item tile */
+section{margin:34px 0}
+.item{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  background:var(--card);
+  box-shadow:var(--shadow);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.item:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 36px rgba(2,6,23,.10);
+  border-color:#dbeafe; /* light blue border on hover */
+}
+
+/* Footer (no dark gradient) */
+footer{
+  margin:40px 0 20px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+  background:none;
+}
+
 hr{border:0;border-top:1px solid var(--line);margin:24px 0}
-@media(max-width:980px){.kpis{grid-template-columns:1fr 1fr} .headshot{width:200px;height:200px}}
-@media(max-width:640px){.kpis{grid-template-columns:1fr} .headshot{width:180px;height:180px}}
+
+/* Responsive */
+@media(max-width:980px){
+  .kpis{grid-template-columns:1fr 1fr}
+  .headshot{width:200px;height:200px}
+}
+@media(max-width:640px){
+  .kpis{grid-template-columns:1fr}
+  .headshot{width:180px;height:180px}
+}
+
+/* ---- FORCE LIGHT THEME OVERRIDES ----
+   If some other CSS (or dark-mode media query) was setting a dark background,
+   these ensure light colors win. Keep at the very end. */
+body{background:var(--bg) !important; color:var(--text) !important}
+header, .card, .item, footer{background-color:initial}
