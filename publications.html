@@ -4,17 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Publications — Cody Delos Santos</title>
+<meta name="description" content="Cody Delos Santos — Data Scientist & Ph.D. Candidate in Applied Mathematics.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
   <div class="wrap">
-    <div>
-      <h1>Cody Delos Santos</h1>
-      <div class="tag">Ph.D. Candidate in Applied Mathematics · Data Scientist · Researcher</div>
+    <div class="brand">
+      <img src="headshot.jpg" alt="Cody headshot">
+      <div>
+        <h1>Cody Delos Santos</h1>
+        <div class="tag">Ph.D. Candidate in Applied Mathematics · Data Scientist</div>
+      </div>
     </div>
     
     <nav>
@@ -25,6 +30,7 @@
       <a href="contact.html" >Contact</a>
       <a href="https://drive.google.com/file/d/1kprXOYKG202NiHhdZFC1SFiFBSn3NTQ9/view?usp=sharing" target="_blank" rel="noopener">CV</a>
       <a href="https://www.linkedin.com/in/cody-delos-santos-08b79a1ab" target="_blank" rel="noopener">LinkedIn</a>
+      <button id="theme-toggle" title="Toggle theme">🌓</button>
     </nav>
     
   </div>
@@ -32,18 +38,19 @@
 <main class="wrap">
 
 <section>
-  <h2>Publications</h2>
+  <h3>Publications</h3>
   <div class="item">
     <ul>
-      <li><strong>Effects of natural hazards on spatio‑temporal patterns of (violent) crime in the United States.</strong> <em>American Journal of Criminal Justice</em> (2025).</li>
-      <li><strong>Determinants of spatio‑temporal patterns of cybercrimes in the USA.</strong> SSRN (2025).</li>
-      <li><strong>Community Surveillance and Property Insurance Risk: Assessing Loss Mitigation Effects of Ring Neighbors.</strong> SSRN (2025).</li>
+      <li><strong>Effects of natural hazards on spatio‑temporal patterns of (violent) crime in the United States.</strong> <em>American Journal of Criminal Justice</em> (2025). <span class="meta">Peer‑reviewed.</span></li>
+      <li><strong>Determinants of spatio‑temporal patterns of cybercrimes in the USA.</strong> <span class="meta">SSRN working paper, 2025.</span></li>
+      <li><strong>Community Surveillance and Property Insurance Risk: Assessing Loss Mitigation Effects of Ring Neighbors.</strong> <span class="meta">SSRN working paper, 2025.</span></li>
     </ul>
   </div>
 </section>
 
 </main>
 <footer>© <span id="y"></span> Cody Delos Santos · Hosted on GitHub Pages</footer>
+<script src="script.js"></script>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>

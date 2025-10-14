@@ -4,17 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects — Cody Delos Santos</title>
+<meta name="description" content="Cody Delos Santos — Data Scientist & Ph.D. Candidate in Applied Mathematics.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
   <div class="wrap">
-    <div>
-      <h1>Cody Delos Santos</h1>
-      <div class="tag">Ph.D. Candidate in Applied Mathematics · Data Scientist · Researcher</div>
+    <div class="brand">
+      <img src="headshot.jpg" alt="Cody headshot">
+      <div>
+        <h1>Cody Delos Santos</h1>
+        <div class="tag">Ph.D. Candidate in Applied Mathematics · Data Scientist</div>
+      </div>
     </div>
     
     <nav>
@@ -25,6 +30,7 @@
       <a href="contact.html" >Contact</a>
       <a href="https://drive.google.com/file/d/1kprXOYKG202NiHhdZFC1SFiFBSn3NTQ9/view?usp=sharing" target="_blank" rel="noopener">CV</a>
       <a href="https://www.linkedin.com/in/cody-delos-santos-08b79a1ab" target="_blank" rel="noopener">LinkedIn</a>
+      <button id="theme-toggle" title="Toggle theme">🌓</button>
     </nav>
     
   </div>
@@ -32,33 +38,32 @@
 <main class="wrap">
 
 <section>
-  <h2>Projects</h2>
-  <div class="grid cols-2">
+  <h3>Featured Projects</h3>
+  <div class="grid cards">
     <div class="item">
       <h4>Cybercrime Forecasting Platform</h4>
-      <p>Nationwide state‑level forecasting with geospatial covariates; delivered interactive dashboards and a resource allocation tool.</p>
-      <p><small>Python · Time series · Tableau</small></p>
+      <p>Nationwide state‑level forecasting with geospatial covariates; interactive dashboards and a resource allocation tool.</p>
+      <p class="meta">Python · Time series · Tableau</p>
+      <p><a class="btn ghost" href="#" onclick="return false;">Case study (coming soon)</a></p>
     </div>
     <div class="item">
       <h4>Technology Adoption & Property Risk</h4>
       <p>TWFE/DiD models estimating crime reduction from community surveillance adoption; quantified insurer impacts.</p>
-      <p><small>Econometrics · Snowflake SQL</small></p>
+      <p class="meta">Econometrics · Snowflake SQL</p>
+      <p><a class="btn ghost" href="#" onclick="return false;">Summary (coming soon)</a></p>
     </div>
     <div class="item">
       <h4>ETL & Data Quality Automation</h4>
       <p>Reproducible pipelines with validation checks and monitoring to improve reliability and reduce processing time.</p>
-      <p><small>SQL · QA/Monitoring</small></p>
-    </div>
-    <div class="item">
-      <h4>Experimentation Playbook</h4>
-      <p>A/B and quasi‑experimental frameworks (power, MDE, uplift) for product & marketing analytics.</p>
-      <p><small>Experimentation · Causal ML</small></p>
+      <p class="meta">SQL · QA/Monitoring</p>
+      <p><a class="btn ghost" href="#" onclick="return false;">Read more (coming soon)</a></p>
     </div>
   </div>
 </section>
 
 </main>
 <footer>© <span id="y"></span> Cody Delos Santos · Hosted on GitHub Pages</footer>
+<script src="script.js"></script>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
