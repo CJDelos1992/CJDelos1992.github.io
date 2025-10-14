@@ -3,143 +3,58 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cody Delos Santos — Data Scientist & Applied Mathematics</title>
-<meta name="description" content="Cody Delos Santos — Ph.D. Candidate in Applied Mathematics. Data Scientist specializing in predictive modeling, causal inference, and analytics.">
+<title>Home — Cody Delos Santos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#0b0d10; --bg2:#0e1216; --card:#111418; --text:#e5e7eb; --muted:#9aa4b2;
-  --brand:#60a5fa; --accent:#22d3ee; --border:rgba(148,163,184,.16);
-  --radius:18px; --shadow:0 10px 35px rgba(2,6,23,.35); --max:1100px;
-}
-*{box-sizing:border-box}
-html,body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-a{color:var(--brand);text-decoration:none} a:hover{color:var(--accent)}
-.wrap{max-width:var(--max);margin:0 auto;padding:20px}
-header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border);z-index:5;background:rgba(11,13,16,.6)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
-nav a{font-weight:600;margin-left:14px;padding:6px 10px;border-radius:10px}
-nav a:hover{background:rgba(96,165,250,.12)}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;margin:28px 0}
-.card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
-.pad{padding:28px}
-h1{margin:0;font-size:22px} .tagline{color:var(--muted);font-size:14px}
-h2{font-size:36px;margin:0 0 10px} p{margin:10px 0;color:#cbd5e1}
-.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-.badge{font-size:12px;border:1px solid var(--border);padding:6px 10px;border-radius:999px;background:rgba(148,163,184,.08)}
-.headshot{width:220px;height:220px;border-radius:50%;object-fit:cover;border:3px solid rgba(96,165,250,.35);box-shadow:var(--shadow)}
-.kpis{display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:12px}
-.kpi{border:1px solid var(--border);border-radius:14px;padding:14px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
-.kpi h4{margin:0 0 6px;font-size:15px} .kpi small{color:var(--muted)}
-section{margin:34px 0} h3{margin:0 0 12px;font-size:22px}
-.grid{display:grid;gap:18px} .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.item{border:1px solid var(--border);border-radius:16px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
-.item h4{margin:0 0 6px;font-size:16px} .item p{margin:6px 0}
-.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#1f2937,#111827);border:1px solid var(--border);padding:10px 14px;border-radius:12px;font-weight:700;color:var(--text)}
-.btn:hover{border-color:var(--brand)}
-footer{margin:40px 0 20px;color:var(--muted);font-size:13px;text-align:center}
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr} .kpis{grid-template-columns:1fr 1fr} .headshot{width:160px;height:160px}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
   <div class="wrap">
     <div>
       <h1>Cody Delos Santos</h1>
-      <div class="tagline">Ph.D. Candidate in Applied Mathematics · Data Scientist · Researcher</div>
+      <div class="tag">Ph.D. Candidate in Applied Mathematics · Data Scientist · Researcher</div>
     </div>
+    
     <nav>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html" >Projects</a>
+      <a href="publications.html" >Publications</a>
+      <a href="about.html" >About</a>
+      <a href="contact.html" >Contact</a>
       <a href="https://drive.google.com/file/d/1kprXOYKG202NiHhdZFC1SFiFBSn3NTQ9/view?usp=sharing" target="_blank" rel="noopener">CV</a>
       <a href="https://www.linkedin.com/in/cody-delos-santos-08b79a1ab" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
+    
   </div>
 </header>
-
 <main class="wrap">
-  <section class="hero">
-    <div class="card pad">
-      <h2>Turning complex data into decisions.</h2>
-      <p>I build predictive and econometric models that improve risk, finance, and operations. My work spans causal inference (DiD, TWFE, RDD), experimentation, and large‑scale SQL/Python analytics. I translate messy, multi‑source data into dashboards and narratives stakeholders can use.</p>
-      <div class="badges">
-        <span class="badge">Python · SQL · Snowflake</span>
-        <span class="badge">Tableau · Power BI</span>
-        <span class="badge">Causal Inference</span>
-        <span class="badge">Forecasting</span>
-        <span class="badge">Data Governance</span>
-      </div>
-      <div class="kpis">
-        <div class="kpi"><h4>92% forecast accuracy</h4><small>Spatio‑temporal models; dashboards for 53 FBI field offices.</small></div>
-        <div class="kpi"><h4>$200K+ savings</h4><small>Estimated insurer impact via TWFE/DiD with robustness checks.</small></div>
-        <div class="kpi"><h4>+20% reliability</h4><small>Automated SQL/Snowflake ETL & QA; faster incident response.</small></div>
-      </div>
-    </div>
-    <div class="card pad" style="display:flex;align-items:center;justify-content:center">
-      <img class="headshot" src="headshot.jpg" alt="Headshot of Cody Delos Santos">
 
+<section class="hero">
+  <div class="card pad">
+    <h2>Turning complex data into decisions.</h2>
+    <p>I build predictive and econometric models that improve risk, finance, and operations—spanning causal inference (DiD, TWFE, RDD), experimentation, and large‑scale SQL/Python analytics.</p>
+    <div class="badges">
+      <span class="badge">Python · SQL · Snowflake</span>
+      <span class="badge">Tableau · Power BI</span>
+      <span class="badge">Causal Inference</span>
+      <span class="badge">Forecasting</span>
+      <span class="badge">Data Governance</span>
     </div>
-  </section>
-
-  <section id="projects">
-    <h3>Selected Projects</h3>
-    <div class="grid cols-2">
-      <div class="item">
-        <h4>Cybercrime Forecasting Platform</h4>
-        <p>Nationwide state‑level forecasting with geospatial covariates; delivered interactive dashboards and a resource allocation tool.</p>
-        <p><small>Python · Time series · Tableau</small></p>
-      </div>
-      <div class="item">
-        <h4>Technology Adoption & Property Risk</h4>
-        <p>TWFE/DiD models estimating crime reduction from community surveillance adoption; quantified insurer impacts.</p>
-        <p><small>Econometrics · Snowflake SQL</small></p>
-      </div>
-      <div class="item">
-        <h4>ETL & Data Quality Automation</h4>
-        <p>Reproducible pipelines with validation checks and monitoring to improve reliability and reduce processing time.</p>
-        <p><small>SQL · QA/Monitoring</small></p>
-      </div>
-      <div class="item">
-        <h4>Experimentation Playbook</h4>
-        <p>A/B and quasi‑experimental frameworks (power, MDE, uplift) for product & marketing analytics.</p>
-        <p><small>Experimentation · Causal ML</small></p>
-      </div>
+    <div class="kpis">
+      <div class="kpi"><h4>92% forecast accuracy</h4><small>Spatio‑temporal models; dashboards for 53 FBI field offices.</small></div>
+      <div class="kpi"><h4>$200K+ savings</h4><small>Estimated insurer impact via TWFE/DiD with robustness checks.</small></div>
+      <div class="kpi"><h4>+20% reliability</h4><small>Automated SQL/Snowflake ETL & QA; faster incident response.</small></div>
     </div>
-  </section>
+  </div>
+  <div class="card pad" style="display:flex;align-items:center;justify-content:center">
+    <img class="headshot" src="img/headshot.jpg" alt="Headshot of Cody Delos Santos">
+  </div>
+</section>
 
-  <section id="publications">
-    <h3>Publications</h3>
-    <div class="item">
-      <ul>
-        <li><strong>Effects of natural hazards on spatio‑temporal patterns of (violent) crime in the United States.</strong> <em>American Journal of Criminal Justice</em> (2025).</li>
-        <li><strong>Determinants of spatio‑temporal patterns of cybercrimes in the USA.</strong> SSRN (2025).</li>
-        <li><strong>Community Surveillance and Property Insurance Risk: Assessing Loss Mitigation Effects of Ring Neighbors.</strong> SSRN (2025).</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h3>Contact</h3>
-    <div class="item">
-      <p><strong>Email:</strong> <a href="mailto:Codydsantos@gmail.com">Codydsantos@gmail.com</a></p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
-        <a class="btn" href="mailto:Codydsantos@gmail.com">Email me</a>
-        <a class="btn" href="https://drive.google.com/file/d/1kprXOYKG202NiHhdZFC1SFiFBSn3NTQ9/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
-        <a class="btn" href="https://www.linkedin.com/in/cody-delos-santos-08b79a1ab" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © <span id="y"></span> Cody Delos Santos · Built with vanilla HTML/CSS · Hosted on GitHub Pages
-  </footer>
 </main>
-
+<footer>© <span id="y"></span> Cody Delos Santos · Hosted on GitHub Pages</footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
