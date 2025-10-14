@@ -1,10 +1,10 @@
 :root{
-  /* Clean blue & white base (peer-style) */
+  /* Clean blue & white base (peer-style + Arizona theme) */
   --bg:#ffffff;
   --text:#0f172a;
   --muted:#475569;
-  --brand:#2563eb;
-  --brand-alt:#0ea5e9;
+  --brand:#2563eb;       /* primary blue */
+  --brand-alt:#0ea5e9;   /* cyan accent */
   --line:#e2e8f0;
   --card:#ffffff;
   --radius:18px;
@@ -83,7 +83,13 @@ p{margin:10px 0}
 }
 
 /* Badges and KPI tiles */
-.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.badges{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:8px;
+  margin-bottom:42px; /* added breathing room before "Notable Research Results" */
+}
 .badge{
   font-size:12px;
   border:1px solid var(--line);
@@ -98,10 +104,36 @@ p{margin:10px 0}
   border-radius:14px;
   padding:16px;
   background:#f8fafc;
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
 .kpi h4{margin:0 0 6px;font-size:15px}
 .kpi small{color:var(--muted)}
 
+/* Section title styling */
+.section-title{
+  margin-top:8px;
+  margin-bottom:20px;
+  font-weight:600;
+  text-decoration:underline;
+  text-underline-offset:6px;
+  text-decoration-thickness:2px;
+  text-decoration-color:#2563eb; /* blue underline accent */
+  color:var(--text);
+  font-size:24px;
+}
+
+/* Clickable KPI links */
+.kpi-link{
+  text-decoration:none;
+  color:inherit;
+}
+.kpi-link:hover .kpi{
+  border-color:#dbeafe;
+  box-shadow:0 16px 36px rgba(37,99,235,0.1);
+  transform:translateY(-2px);
+}
+
+/* Generic item tile */
 section{margin:34px 0}
 .item{
   border:1px solid var(--line);
@@ -139,7 +171,7 @@ hr{border:0;border-top:1px solid var(--line);margin:24px 0}
 }
 
 /* ============================================================
-   Arizona Sunset Gradient Background (Option B)
+   Arizona Sunset Gradient Background
    ============================================================ */
 body::before{
   content:"";
@@ -152,6 +184,6 @@ body::before{
   background-attachment:fixed;
 }
 
-/* Light theme enforcement */
+/* Force light theme */
 body{background:var(--bg)!important;color:var(--text)!important;}
 header,main,section,footer,.card,.item{background-color:initial;}
