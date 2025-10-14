@@ -1,12 +1,12 @@
 :root{
-  /* Clean blue & white (peer-like) */
-  --bg:#ffffff;          /* page background */
-  --text:#0f172a;        /* near-navy text */
-  --muted:#475569;       /* slate for secondary text */
-  --brand:#2563eb;       /* primary blue accent */
-  --brand-alt:#0ea5e9;   /* cyan secondary accent (optional) */
-  --line:#e2e8f0;        /* light border */
-  --card:#ffffff;        /* card background */
+  /* Clean blue & white base (peer-style) */
+  --bg:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --brand:#2563eb;
+  --brand-alt:#0ea5e9;
+  --line:#e2e8f0;
+  --card:#ffffff;
   --radius:18px;
   --shadow:0 12px 28px rgba(2,6,23,.08);
   --max:1080px;
@@ -26,22 +26,20 @@ html,body{
 a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
 
-/* Layout wrapper */
 .wrap{max-width:var(--max);margin:0 auto;padding:22px}
 
-/* Header: light + subtle blur */
+/* Header */
 header{
-  position:sticky; top:0; z-index:5;
+  position:sticky;top:0;z-index:5;
   background:rgba(255,255,255,.9);
   border-bottom:1px solid var(--line);
   backdrop-filter:saturate(1.2) blur(8px);
 }
 header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
-
 .brand h1{margin:0;font-size:22px;letter-spacing:.2px}
 .tag{color:var(--muted);font-size:14px}
 
-/* Nav */
+/* Navigation */
 nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 nav a{
   font-weight:600;
@@ -49,9 +47,8 @@ nav a{
   border-radius:10px;
   transition:background .15s ease, transform .15s ease;
 }
-nav a.active{background:#eef2ff}   /* pale blue */
-nav a:hover{background:#f1f5ff}    /* very pale blue hover */
-
+nav a.active{background:#eef2ff}
+nav a:hover{background:#f1f5ff}
 nav a.btn{
   background:var(--brand);
   color:#fff;
@@ -65,7 +62,7 @@ nav a.btn--ghost{
   border:1px solid var(--line);
 }
 
-/* Cards / content */
+/* Cards and content containers */
 .card{
   background:var(--card);
   border:1px solid var(--line);
@@ -78,7 +75,6 @@ h2{font-size:36px;margin:0 0 10px;letter-spacing:-0.02em;line-height:1.2}
 h3{margin:0 0 12px;font-size:22px}
 p{margin:10px 0}
 
-/* Centered headshot */
 .center{display:flex;justify-content:center;align-items:center}
 .headshot{
   width:240px;height:240px;border-radius:50%;object-fit:cover;
@@ -86,14 +82,14 @@ p{margin:10px 0}
   box-shadow:0 10px 26px rgba(2,6,23,.12);
 }
 
-/* Badges + KPIs */
+/* Badges and KPI tiles */
 .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
 .badge{
   font-size:12px;
   border:1px solid var(--line);
   padding:6px 10px;
   border-radius:999px;
-  background:#f1f5ff; /* pale blue chip */
+  background:#f1f5ff;
   color:#0f172a;
 }
 .kpis{display:grid;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:14px}
@@ -101,12 +97,11 @@ p{margin:10px 0}
   border:1px solid var(--line);
   border-radius:14px;
   padding:16px;
-  background:#f8fafc; /* light slate bg */
+  background:#f8fafc;
 }
 .kpi h4{margin:0 0 6px;font-size:15px}
 .kpi small{color:var(--muted)}
 
-/* Generic item tile */
 section{margin:34px 0}
 .item{
   border:1px solid var(--line);
@@ -119,10 +114,10 @@ section{margin:34px 0}
 .item:hover{
   transform:translateY(-2px);
   box-shadow:0 16px 36px rgba(2,6,23,.10);
-  border-color:#dbeafe; /* light blue border on hover */
+  border-color:#dbeafe;
 }
 
-/* Footer (no dark gradient) */
+/* Footer */
 footer{
   margin:40px 0 20px;
   color:var(--muted);
@@ -143,8 +138,20 @@ hr{border:0;border-top:1px solid var(--line);margin:24px 0}
   .headshot{width:180px;height:180px}
 }
 
-/* ---- FORCE LIGHT THEME OVERRIDES ----
-   If some other CSS (or dark-mode media query) was setting a dark background,
-   these ensure light colors win. Keep at the very end. */
-body{background:var(--bg) !important; color:var(--text) !important}
-header, .card, .item, footer{background-color:initial}
+/* ============================================================
+   Arizona Sunset Gradient Background (Option B)
+   ============================================================ */
+body::before{
+  content:"";
+  position:fixed; inset:0; z-index:-1;
+  background:
+    radial-gradient(1200px 500px at 70% -10%, rgba(255,210,157,.55), transparent 60%),
+    radial-gradient(900px 400px at 20% 0%, rgba(249,177,122,.40), transparent 55%),
+    linear-gradient(180deg, #ffe9cf 0%, #ffd7b1 35%, #f6c29a 60%, #fff8ef 100%);
+  pointer-events:none;
+  background-attachment:fixed;
+}
+
+/* Light theme enforcement */
+body{background:var(--bg)!important;color:var(--text)!important;}
+header,main,section,footer,.card,.item{background-color:initial;}
