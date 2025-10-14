@@ -171,19 +171,15 @@ hr{border:0;border-top:1px solid var(--line);margin:24px 0}
 }
 
 /* ============================================================
-   Arizona Sunset Gradient Background
+   Arizona Landscape Background Image
    ============================================================ */
 body::before{
   content:"";
-  position:fixed; inset:0; z-index:-1;
-  background:
-    radial-gradient(1200px 500px at 70% -10%, rgba(255,210,157,.55), transparent 60%),
-    radial-gradient(900px 400px at 20% 0%, rgba(249,177,122,.40), transparent 55%),
-    linear-gradient(180deg, #ffe9cf 0%, #ffd7b1 35%, #f6c29a 60%, #fff8ef 100%);
-  pointer-events:none;
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background: url("arizona-bg.png") center bottom / cover no-repeat;
   background-attachment:fixed;
+  pointer-events:none;
+  opacity:0.85; /* Adjust 0.7–1.0 for more/less visibility */
 }
-
-/* Force light theme */
-body{background:var(--bg)!important;color:var(--text)!important;}
-header,main,section,footer,.card,.item{background-color:initial;}
