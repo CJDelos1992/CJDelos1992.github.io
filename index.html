@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home — Cody Delos Santos</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home — Cody Delos Santos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -16,60 +16,75 @@
     
     <nav>
       <a href="index.html" class="active">Home</a>
-      <a href="presentations.html" >Presentations</a>
-      <a href="publications.html" >Publications</a>
-      <a href="about.html" >About</a>
-      <a href="contact.html" >Contact</a>
-      <a href="https://drive.google.com/file/d/1kprXOYKG202NiHhdZFC1SFiFBSn3NTQ9/view?usp=sharing" target="_blank">CV</a>
-      <a href="https://www.linkedin.com/in/cody-delos-santos-08b79a1ab" target="_blank">LinkedIn</a>
+      <a href="presentations.html">Presentations</a>
+      <a href="publications.html">Publications</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://drive.google.com/file/d/1kprXOYKG202NiHhdZFC1SFiFBSn3NTQ9/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+      <a href="https://www.linkedin.com/in/cody-delos-santos-08b79a1ab" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
-    
   </div>
 </header>
+
 <main class="wrap">
 
-<section class="center" style="margin-top:18px">
-  <img class="headshot" src="headshot.jpg" alt="Headshot of Cody Delos Santos">
-</section>
+  <section class="center" style="margin-top:18px">
+    <img class="headshot" src="headshot.jpg" alt="Headshot of Cody Delos Santos">
+  </section>
 
-<section class="card pad">
-  <h2>Turning complex data into decisions.</h2>
-  <p>Data Scientist and published researcher with 5+ years of experience building predictive and statistical models using Python, SQL, Excel, Tableau, Power BI, and Snowflake.</p>
-  <div class="badges">
-    <span class="badge">Python · SQL · Snowflake</span>
-    <span class="badge">Tableau · Power BI · Sigma</span>
-    <span class="badge">Causal Inference · Quasi-Experimental Design</span>
-    <span class="badge">Forecasting · Prediction</span>
-    <span class="badge">Data Science</span>
-  </div>
-  <h3>Notable Research Results</h3>
-<div class="kpis">
-  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5007470" target="_blank" rel="noopener" class="kpi-link">
-    <div class="kpi">
-      <h4>92% forecast accuracy</h4>
-      <small>Discovered determinants of cybercrime on DHS-funded project and forecasted cybercrime severity across U.S. states.</small>
+  <section class="card pad">
+    <h2>Turning complex data into decisions.</h2>
+    <p>
+      Data Scientist and published researcher with 5+ years of experience building predictive and statistical models
+      using Python, SQL, Excel, Tableau, Power BI, and Snowflake.
+    </p>
+    <div class="badges">
+      <span class="badge">Python · SQL · Snowflake</span>
+      <span class="badge">Tableau · Power BI · Sigma</span>
+      <span class="badge">Causal Inference · Quasi-Experimental Design</span>
+      <span class="badge">Forecasting · Prediction</span>
+      <span class="badge">Data Science</span>
     </div>
-  </a>
 
-  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5591994" target="_blank" rel="noopener" class="kpi-link">
-    <div class="kpi">
-      <h4>$200K+ savings</h4>
-      <small>Estimated Ring Technology effect on property crime via TWFE/DiD and quantified savings for insurers.</small>
+    <!-- Added spacing and emphasized section title -->
+    <h3 class="section-title">Notable Research Results</h3>
+    <div class="kpis">
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5007470" target="_blank" rel="noopener" class="kpi-link">
+        <div class="kpi">
+          <h4>92% forecast accuracy</h4>
+          <small>
+            Discovered determinants of cybercrime on DHS-funded project and forecasted cybercrime severity
+            across U.S. states.
+          </small>
+        </div>
+      </a>
+
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5591994" target="_blank" rel="noopener" class="kpi-link">
+        <div class="kpi">
+          <h4>$200K+ savings</h4>
+          <small>
+            Estimated Ring Technology effect on property crime via TWFE/DiD and quantified savings for insurers.
+          </small>
+        </div>
+      </a>
+
+      <a href="https://link.springer.com/article/10.1007/s12103-025-09805-y" target="_blank" rel="noopener" class="kpi-link">
+        <div class="kpi">
+          <h4>100+ identified changes in crime patterns</h4>
+          <small>
+            Quantified statistically significant changes in spatio-temporal crime patterns following natural
+            hazard events.
+          </small>
+        </div>
+      </a>
     </div>
-  </a>
-
-  <a href="https://link.springer.com/article/10.1007/s12103-025-09805-y" target="_blank" rel="noopener" class="kpi-link">
-    <div class="kpi">
-      <h4>100+ identified changes in crime patterns</h4>
-      <small>Quantified statistically significant changes in spatio-temporal crime patterns following natural hazard events.</small>
-    </div>
-  </a>
-</div>
-
-</section>
+  </section>
 
 </main>
+
 <footer>© <span id="y"></span> Cody Delos Santos · Hosted on GitHub Pages</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
