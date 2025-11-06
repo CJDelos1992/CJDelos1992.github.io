@@ -29,9 +29,23 @@
 
 <main class="wrap">
 
-  <section class="center" style="margin-top:18px">
-    <img class="headshot" src="headshot.jpg" alt="Headshot of Cody Delos Santos">
-  </section>
+ <section class="center" style="margin-top:18px; text-align:center;">
+  <img
+    class="headshot"
+    src="headshot.jpg"
+    alt="Headshot of Cody Delos Santos"
+    style="
+      width:260px;                /* make the circle bigger */
+      height:260px;               /* keep it a circle */
+      border-radius:50%;
+      object-fit:cover;           /* fill the circle */
+      object-position:50% 35%;    /* nudge framing up if forehead is cropped; adjust 20–45% */
+      display:block;
+      margin:0 auto;
+    "
+  >
+</section>
+
 
   <section class="card pad">
     <h2>Turning complex data into decisions.</h2>
