@@ -179,7 +179,7 @@ p{
   object-fit:cover;
 
   /* Move image farther right so face appears more centered in circle */
-  object-position:66% 42%;
+  object-position:64% 42%;
 
   /*
     Scale below 1 zooms out a bit so more of the head is visible
@@ -343,7 +343,7 @@ hr{
   }
 
   .headshot{
-    object-position:64% 42%;
+    ition:64% 42%;
     transform:scale(0.92);
   }
 }
