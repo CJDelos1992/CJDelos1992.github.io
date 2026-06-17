@@ -1,4 +1,3 @@
-```css
 :root{
   /* Clean blue & white base (peer-style + Arizona theme) */
   --bg:#ffffff;
@@ -167,17 +166,7 @@ p{
   margin:0 auto;
   border-radius:50%;
   object-fit:cover;
-
-  /*
-    Horizontal position:
-    Increase 58% to move the visible image farther right,
-    which moves your face left within the circle.
-
-    Vertical position:
-    Lower than 50% moves the visible crop slightly upward.
-  */
-  object-position:58% 46%;
-
+  object-position:62% 46%;
   border:6px solid var(--bg);
   box-shadow:0 10px 26px rgba(2,6,23,.12);
 }
@@ -317,7 +306,7 @@ hr{
   .headshot{
     width:200px;
     height:200px;
-    object-position:58% 46%;
+    object-position:62% 46%;
   }
 }
 
@@ -329,7 +318,7 @@ hr{
   .headshot{
     width:180px;
     height:180px;
-    object-position:58% 46%;
+    object-position:62% 46%;
   }
 }
 
@@ -347,4 +336,3 @@ body::before{
   pointer-events:none;
   opacity:.85;
 }
-```
