@@ -1,3 +1,4 @@
+```css
 :root{
   /* Clean blue & white base (peer-style + Arizona theme) */
   --bg:#ffffff;
@@ -12,8 +13,12 @@
   --max:1080px;
 }
 
-*{box-sizing:border-box}
-html,body{
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
   margin:0;
   background:var(--bg);
   color:var(--text);
@@ -23,73 +28,172 @@ html,body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
+a{
+  color:var(--brand);
+  text-decoration:none;
+}
 
-.wrap{max-width:var(--max);margin:0 auto;padding:22px}
+a:hover{
+  text-decoration:underline;
+}
 
-/* Header */
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:22px;
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+
 header{
-  position:sticky;top:0;z-index:5;
+  position:sticky;
+  top:0;
+  z-index:5;
   background:rgba(255,255,255,.9);
   border-bottom:1px solid var(--line);
   backdrop-filter:saturate(1.2) blur(8px);
 }
-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
-.brand h1{margin:0;font-size:22px;letter-spacing:.2px}
-.tag{color:var(--muted);font-size:14px}
 
-/* Navigation */
-nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+header .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 22px;
+}
+
+.brand h1{
+  margin:0;
+  font-size:22px;
+  letter-spacing:.2px;
+}
+
+.tag{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+
+nav{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
 nav a{
   font-weight:600;
   padding:8px 12px;
   border-radius:10px;
   transition:background .15s ease, transform .15s ease;
 }
-nav a.active{background:#eef2ff}
-nav a:hover{background:#f1f5ff}
+
+nav a.active{
+  background:#eef2ff;
+}
+
+nav a:hover{
+  background:#f1f5ff;
+}
+
 nav a.btn{
   background:var(--brand);
   color:#fff;
   border:1px solid rgba(37,99,235,.25);
   box-shadow:0 6px 12px rgba(37,99,235,.18);
 }
-nav a.btn:hover{transform:translateY(-1px);text-decoration:none}
+
+nav a.btn:hover{
+  transform:translateY(-1px);
+  text-decoration:none;
+}
+
 nav a.btn--ghost{
   background:#fff;
   color:var(--brand);
   border:1px solid var(--line);
 }
 
-/* Cards and content containers */
+/* ============================================================
+   Cards and content containers
+   ============================================================ */
+
 .card{
   background:var(--card);
   border:1px solid var(--line);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
 }
-.pad{padding:28px}
 
-h2{font-size:36px;margin:0 0 10px;letter-spacing:-0.02em;line-height:1.2}
-h3{margin:0 0 12px;font-size:22px}
-p{margin:10px 0}
+.pad{
+  padding:28px;
+}
 
-.center{display:flex;justify-content:center;align-items:center}
+h2{
+  font-size:36px;
+  margin:0 0 10px;
+  letter-spacing:-0.02em;
+  line-height:1.2;
+}
+
+h3{
+  margin:0 0 12px;
+  font-size:22px;
+}
+
+p{
+  margin:10px 0;
+}
+
+/* ============================================================
+   Headshot
+   ============================================================ */
+
+.center{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
 .headshot{
-  width:240px;height:240px;border-radius:50%;object-fit:cover;
+  display:block;
+  width:240px;
+  height:240px;
+  margin:0 auto;
+  border-radius:50%;
+  object-fit:cover;
+
+  /*
+    Horizontal position:
+    Increase 58% to move the visible image farther right,
+    which moves your face left within the circle.
+
+    Vertical position:
+    Lower than 50% moves the visible crop slightly upward.
+  */
+  object-position:58% 46%;
+
   border:6px solid var(--bg);
   box-shadow:0 10px 26px rgba(2,6,23,.12);
 }
 
-/* Badges and KPI tiles */
+/* ============================================================
+   Badges and KPI tiles
+   ============================================================ */
+
 .badges{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
   margin-top:8px;
-  margin-bottom:42px; /* added breathing room before "Notable Research Results" */
+  margin-bottom:42px;
 }
+
 .badge{
   font-size:12px;
   border:1px solid var(--line);
@@ -98,18 +202,38 @@ p{margin:10px 0}
   background:#f1f5ff;
   color:#0f172a;
 }
-.kpis{display:grid;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:14px}
+
+.kpis{
+  display:grid;
+  gap:14px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:14px;
+}
+
 .kpi{
   border:1px solid var(--line);
   border-radius:14px;
   padding:16px;
   background:#f8fafc;
-  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease,
+    border-color .15s ease;
 }
-.kpi h4{margin:0 0 6px;font-size:15px}
-.kpi small{color:var(--muted)}
 
-/* Section title styling */
+.kpi h4{
+  margin:0 0 6px;
+  font-size:15px;
+}
+
+.kpi small{
+  color:var(--muted);
+}
+
+/* ============================================================
+   Section title styling
+   ============================================================ */
+
 .section-title{
   margin-top:8px;
   margin-bottom:20px;
@@ -117,39 +241,56 @@ p{margin:10px 0}
   text-decoration:underline;
   text-underline-offset:6px;
   text-decoration-thickness:2px;
-  text-decoration-color:#2563eb; /* blue underline accent */
+  text-decoration-color:#2563eb;
   color:var(--text);
   font-size:24px;
 }
 
-/* Clickable KPI links */
+/* ============================================================
+   Clickable KPI links
+   ============================================================ */
+
 .kpi-link{
   text-decoration:none;
   color:inherit;
 }
+
 .kpi-link:hover .kpi{
   border-color:#dbeafe;
-  box-shadow:0 16px 36px rgba(37,99,235,0.1);
+  box-shadow:0 16px 36px rgba(37,99,235,.10);
   transform:translateY(-2px);
 }
 
-/* Generic item tile */
-section{margin:34px 0}
+/* ============================================================
+   Generic item tile
+   ============================================================ */
+
+section{
+  margin:34px 0;
+}
+
 .item{
   border:1px solid var(--line);
   border-radius:16px;
   padding:18px;
   background:var(--card);
   box-shadow:var(--shadow);
-  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease,
+    border-color .15s ease;
 }
+
 .item:hover{
   transform:translateY(-2px);
   box-shadow:0 16px 36px rgba(2,6,23,.10);
   border-color:#dbeafe;
 }
 
-/* Footer */
+/* ============================================================
+   Footer
+   ============================================================ */
+
 footer{
   margin:40px 0 20px;
   color:var(--muted);
@@ -158,28 +299,52 @@ footer{
   background:none;
 }
 
-hr{border:0;border-top:1px solid var(--line);margin:24px 0}
-
-/* Responsive */
-@media(max-width:980px){
-  .kpis{grid-template-columns:1fr 1fr}
-  .headshot{width:200px;height:200px}
+hr{
+  border:0;
+  border-top:1px solid var(--line);
+  margin:24px 0;
 }
+
+/* ============================================================
+   Responsive layout
+   ============================================================ */
+
+@media(max-width:980px){
+  .kpis{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .headshot{
+    width:200px;
+    height:200px;
+    object-position:58% 46%;
+  }
+}
+
 @media(max-width:640px){
-  .kpis{grid-template-columns:1fr}
-  .headshot{width:180px;height:180px}
+  .kpis{
+    grid-template-columns:1fr;
+  }
+
+  .headshot{
+    width:180px;
+    height:180px;
+    object-position:58% 46%;
+  }
 }
 
 /* ============================================================
    Arizona Landscape Background Image
    ============================================================ */
+
 body::before{
   content:"";
   position:fixed;
   inset:0;
   z-index:-1;
-  background: url("arizona-bg.png") center bottom / cover no-repeat;
+  background:url("arizona-bg.png") center bottom / cover no-repeat;
   background-attachment:fixed;
   pointer-events:none;
-  opacity:0.85; /* Adjust 0.7–1.0 for more/less visibility */
+  opacity:.85;
 }
+```
