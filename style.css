@@ -317,6 +317,12 @@ hr{
    ============================================================ */
 
 @media(max-width:980px){
+  header .wrap{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
   .kpis{
     grid-template-columns:1fr 1fr;
   }
