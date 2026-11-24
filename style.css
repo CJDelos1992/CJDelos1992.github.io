@@ -8,3 +8,6 @@ body{min-height:100vh;display:flex;flex-direction:column}main.wrap{flex:1;width:
 
 /* Context and hierarchy for homepage research metrics */
 .research-summary{border-block:1px solid var(--line);padding:24px 0 27px}.research-summary h2{font-size:24px;margin:0 0 5px}.summary-intro{font-size:14px;color:var(--muted);margin:0 0 22px}.research-summary .metrics{border:0;padding:0}.research-summary .metrics span{font-size:14px;line-height:1.55;max-width:290px}@media(max-width:700px){.research-summary .metrics span{font-size:13px}}@media(max-width:540px){.research-summary{padding:20px 0}.research-summary .metrics span{max-width:none}.summary-intro{margin-bottom:18px}}
+
+/* Research metric expertise labels */
+.research-summary h2{margin-bottom:22px}.research-summary .metric-label{font-size:13px;line-height:1.4;font-weight:550;color:var(--muted);margin:0 0 8px}.research-summary .metrics>div{min-width:0}@media(max-width:700px) and (min-width:541px){.research-summary .metric-label{min-height:36px}}@media(max-width:540px){.research-summary h2{margin-bottom:18px}}
