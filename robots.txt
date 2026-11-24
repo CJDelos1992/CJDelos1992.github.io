@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://cjdelos1992.github.io/sitemap.xml
