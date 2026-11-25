@@ -1,0 +1,55 @@
+/* Portfolio-only responsive layout. Each figure keeps its original 4:3 canvas. */
+.portfolio-main .project-group,
+.portfolio-main .portfolio-resources {
+  max-width: none;
+}
+.portfolio-main .project-group .project-with-figure {
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 39%);
+  gap: 32px;
+  align-items: center;
+}
+.portfolio-main .project-copy {
+  min-width: 0;
+}
+.portfolio-main .project-copy h2 {
+  overflow-wrap: anywhere;
+}
+.portfolio-main .project-figure {
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  justify-self: end;
+}
+.portfolio-main .project-figure a {
+  display: block;
+  border-radius: 8px;
+  cursor: zoom-in;
+}
+.portfolio-main .project-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+.portfolio-main .project-figure a:hover {
+  outline: 1px solid var(--line);
+  outline-offset: 2px;
+}
+@media (max-width: 840px) {
+  .portfolio-main .project-group .project-with-figure {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .portfolio-main .project-figure {
+    max-width: 560px;
+    justify-self: start;
+  }
+}
+@media (max-width: 540px) {
+  .portfolio-main .project-group .project-with-figure {
+    gap: 16px;
+  }
+}
