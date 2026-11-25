@@ -53,3 +53,13 @@
     gap: 16px;
   }
 }
+
+/* Use the available desktop space for more legible figures. */
+@media (min-width: 1000px) {
+  header .wrap, main.wrap.portfolio-main, footer .wrap {
+    max-width: 1120px;
+  }
+  .portfolio-main .project-group .project-with-figure {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 44%);
+  }
+}
